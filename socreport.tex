@@ -1,0 +1,96 @@
+\documentclass[fyp]{socreport}
+\usepackage{fullpage}
+\begin{document}
+\pagenumbering{roman}
+\title{Design and Implementation of an Algorithm for a Problem}
+\author{Tan Ah Kow}
+\projyear{2004/05}
+\projnumber{H123456}
+\advisor{Dr. Lee Ah Hua}
+\deliverables{
+	\item Report: 1 Volume
+	\item Source Code: 1 DVD}
+\maketitle
+\begin{abstract}
+In this report, we study a problem and design an efficient algorithm
+to solve the problem.  We implemented the algorithm and evaluated
+its performance againts previous proposed algorithms that solves the
+same problem.  Our results show that our algorithm runs faster.
+
+\begin{descriptors}
+    \item C5 Computer System Implementation
+	\item G2.2 Graph Algorithms
+\end{descriptors}
+\begin{keywords}
+	Problem, algorithm, implementation
+\end{keywords}
+\begin{implement}
+	Solaris 10, g++ 3.3, Tcl/Tk 8.4.7
+\end{implement}
+\end{abstract}
+
+\begin{acknowledgement}
+   I would like to thank my friends, families and advisors.
+   Without them, I would not have be able to complete this project.
+\end{acknowledgement}
+
+\listoffigures 
+\listoftables
+\tableofcontents 
+
+\chapter{Introduction}
+Many problems exist in computer science.  In this project, we 
+studied one particular important problem and propose a solution 
+for it.  
+
+\section{Background}
+In this section, we briefly discuss the history and background
+of the problem.  A detail literature survey is presented in 
+Chapter \ref{ch:related}.
+
+The problem we study in this report is an important one.
+This problem is first proposed in 1990 in the context
+of graph theory \cite{smith90graph}.  Zhang gives the
+first algorithm to the problem and applied it to solve several 
+problems in artificial intelligence \cite{zhang91ai,zhang92ai}.  
+More recently, a slightly different formulation of the problem
+is studied independently \cite{kovsky92diff,ali94diff}.  None of this previous work
+uses the technique that we propose in this project.  Thus, we 
+believe that our algorithm is novel.
+
+\section{The Problem}
+In this section, we formally defined the problem.  We adopt
+the definition given by Kovsky \cite{kovsky92diff}.
+
+\section{Our Solution}
+\section{Report Organization}
+
+\chapter{Related Work}
+\label{ch:related}
+
+\chapter{Problem and Algorithm}
+\section{Formal Description of Problem}
+\section{Design of Algorithm}
+\section{Proof of Correctness}
+\section{Complexity Analysis}
+
+\chapter{Evaluation}
+\section{Implementation Details}
+\section{Experimental Setup}
+\section{Results}
+
+\chapter{Conclusion}
+\section{Contributions}
+\section{Future Work}
+
+\bibliographystyle{socreport}
+\bibliography{socreport}
+
+\appendix
+\chapter{Code}
+
+\chapter{Proofs}
+In this appendix, we present alternate, longer, but more interesting proof 
+of correctness of our algorithm.  This proof is based on induction and proof
+by contradiction.
+\end{document}

@@ -26,7 +26,11 @@ For UROP, use the document class UROP:
 ### Compiling 
 * Replace socreport of the first line of Makefile with your file name
 ```
-$(FILE)=socreport
+FILE=your-report-name
+```
+* Replace socreport of the second line of Makefile with your biblography file name
+```
+BIBFILE=your-biblography-name
 ```
 
 ```
@@ -42,6 +46,11 @@ Because LaTeX can be very messy
 
 ```
 make clean
+```
+
+### TAR GZip the files 
+```
+make tar
 ```
 
 ### Some Errors

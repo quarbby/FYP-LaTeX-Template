@@ -56,3 +56,9 @@ make tar
 ### Some Errors
 * bibtex/ pdflatex: No such file or directory for OSX
 Might be due to directory paths. Refer to [this stack overflow answer](http://tex.stackexchange.com/questions/163849/mavericks-upgrade-screwed-up-my-pdflatex-command-not-found)
+
+### Some other LaTeX Template Sources
+* [ACM LaTeX Style Guide](https://www.acm.org/publications/article-templates/acm-latex-style-guide)
+* [AAAI Author Kit](http://www.aaai.org/Publications/Author/author.php)
+* [Academic Journals LaTeX Templates](http://www.latextemplates.com/cat/academic-journals)
+* [Resumes LaTeX Template](http://www.latextemplates.com/cat/curricula-vitae)

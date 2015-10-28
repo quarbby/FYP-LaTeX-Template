@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: aaai-inst.aux
+The style file: aaai.bst
+Database file #1: socreport.bib.bib
+You've used 1 entry,
+            2568 wiz_defined-function locations,
+            580 strings with 4733 characters,
+and the built_in function-call counts, 375 in all, are:
+= -- 35
+> -- 18
+< -- 0
++ -- 6
+- -- 6
+* -- 29
+:= -- 71
+add.period$ -- 5
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 14
+empty$ -- 26
+format.name$ -- 9
+if$ -- 73
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 9
+num.names$ -- 3
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 5
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 0
+while$ -- 2
+width$ -- 2
+write$ -- 16

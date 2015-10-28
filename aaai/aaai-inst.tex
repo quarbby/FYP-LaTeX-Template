@@ -1,0 +1,522 @@
+%File: AAAI-inst.tex
+% WARNING: If you are not an experienced LaTeX user, AAAI does
+% NOT recommend that you use LaTeX to format your paper. No
+% support for LaTeX is provided by AAAI, and these instructions
+% and the accompanying style files are NOT guaranteed to work.
+% If the results you obtain are not in accordance with the 
+% specifications you received in your packet (or online), you
+% must correct the style files or macro to achieve the correct
+% result. 
+%
+% AAAI CANNOT HELP YOU WITH THIS TASK. 
+%
+% The instructions herein are provided as a general guide for 
+% experienced LaTeX users who would like to use that software
+% to format their paper for an AAAI Press proceedings or technical
+% report or AAAI working notes. These instructions are generic. 
+% Consequently, they do not include specific dates, page charges, and so forth. 
+% Please consult your specific written conference instructions for 
+% details regarding your submission.
+%
+% Acknowledgments
+% The preparation of the \LaTeX{} and Bib\TeX{} files that
+% implement these instructions was supported by 
+% Schlumberger Palo Alto Research, AT\&T Bell
+% Laboratories, Morgan Kaufmann Publishers, and AAAI Press.
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{Formatting Your AAAI Paper Using the \LaTeX\ Style Files}
+\author{AAAI Press\\
+American Association for Artificial Intelligence\\
+445 Burgess Drive\\
+Menlo Park, California 94025--3496\\
+proceedings@aaai.org}
+\maketitle
+\begin{abstract}
+\begin{quote}
+This document provides a very brief overview of the AAAI style file
+for \LaTeX2e, as well as some general instructions on using the 
+Times Roman font set. To use this style file, you must already
+be familiar with \LaTeX\ and must read the general formatting 
+instructions supplied in your author kit. This document just gives you some 
+brief instructions on using the 
+aaai.sty file. Most common formatting commands are included in this document.
+\end{quote}
+\end{abstract}
+
+\section{About These Instructions}
+
+In the past, this instruction file has contained general formatting instructions
+for persons preparing their papers for an AAAI proceedings. Those instructions
+are now available on AAAI's website in PDF format only, and are part of the
+general author kit distributed to all authors whose papers have been accepted by
+AAAI for publication in an AAAI conference proceedings. This document only
+contains specific information of interest to \LaTeX\ users. 
+
+{\bf Warning:} If you are not an experienced \LaTeX\ user, AAAI does {\bf not}
+recommend that you use \LaTeX\ to format your paper. No support for LaTeX is
+provided by AAAI, and these instructions and the accompanying style files are {\bf
+not} guaranteed to work. If the results you obtain are not in accordance with the 
+specifications you received in your packet (or online), you must correct the style
+files or macro to achieve the correct result. AAAI {\bf cannot} help you with this
+task.  The instructions herein are provided as a general guide for experienced
+\LaTeX\ users who would like to use that software to format their paper for an
+AAAI Press proceedings or technical report or AAAI working notes. These
+instructions are generic. Consequently, they do not include specific dates, page
+charges, and so forth. Please consult your specific written conference
+instructions for details regarding your submission.
+
+\section{Output}
+To ready your paper for publication, please read the ``Instructions for Authors''
+paper. This document is available on AAAI's website, and is supplied in your
+author kit.
+
+\subsection{Paper Size}
+If you are outside the US, the \LaTeX\ default paper size has most likely been
+changed from ``letterpaper" to ``a4." Because we require that your electronic
+paper be formatted in US letter size, you will need to change the default back to
+US letter size. Assuming you are using the 2e version of \LaTeX\, you can do this
+by including the [letterpaper] option at the beginning of your file:
+\begin{footnotesize}
+\begin{verbatim}
+  \documentclass[letterpaper]{article}. 
+\end{verbatim}
+\end{footnotesize}
+
+This command is usually sufficient to change the format for LaTeX. However,  it
+is also usually necessary to configure dvips. Try passing the -tletter option to
+dvips. Those using RedHat Linux 8.0 and LaTeX should also check the paper size
+setting in  "/usr/share/texmf/dvips/config/config.ps" --- it may be that ``A4" is
+the default, rather than ``letter."  This  can result in incorrect top and bottom
+margins in documents you prepare with LaTeX. You will need to edit the config
+file to correct the problem. (Once you've edited to config file for US letter, it
+may not be possible for you to print your papers locally).
+
+
+\section{The AAAI Style File}
+The latest version of the AAAI style file is available on AAAI's website. You
+should download this file and place it in a file named ``aaai.sty" in the \TeX\
+search path. Placing it in the same directory as the paper should also work. (We
+recommend that you download the complete author kit so that you will have the
+latest bug list and instruction set.
+
+\subsection{Using the Style File}
+In the \LaTeX\ source for your paper, place the following lines as follows:
+
+\begin{footnotesize}
+\begin{verbatim}
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}\title{Title}
+\author{Author 1 \and Author 2 \\ 
+Address line \\ Address line 
+\And
+Author 3 \\ Address line \\ Address line}
+\begin{document}
+\maketitle
+...
+\end{document}
+\end{verbatim}
+\end{footnotesize}
+
+This command set-up is for three authors. Add or subtract author and address
+lines as necessary.  In most instances, this is all you need to do to format your
+paper in the Times font. The helvet package will cause Helvetica to be used for
+sans serif, and the courier package will cause Courier to be used for the
+typewriter font. These files are part of the PSNFSS2e package, which is freely
+available from many Internet sites (and is often part of a standard installation.
+If using these commands does not work for you (and you are using \LaTeX2e), you
+will need to refer to the fonts information found later on in this document.
+
+
+\subsubsection{Including a Reference List}
+
+At the end of your paper, you can include your reference list by using the
+following commands:
+
+\begin{footnotesize}
+\begin{verbatim}
+\bibliography{Bibliography-File}
+\bibliographystyle{aaai}
+\end{document}
+\end{verbatim}
+\end{footnotesize}
+
+\subsubsection{Formatting Author Information}
+Author information can be set in a number of different styles, depending on the
+number of  authors and the number of affiliations you need to display. For
+several authors from the same institution, use \verb+\+and:
+
+\begin{footnotesize}
+\begin{verbatim}
+\author{Author 1 \and 
+... 
+\and Author n \\
+Address line \\ 
+... 
+\\ Address line}
+\end{verbatim}
+\end{footnotesize}
+
+\noindent If the names do not fit well on one line use:
+
+\begin{footnotesize}
+\begin{verbatim}
+\author{Author 1 \\ {\bf Author 2} \\ 
+... 
+\\ {\bf Author n} \\
+Address line \\ 
+... 
+\\ Address line}
+\end{verbatim}
+\end{footnotesize}
+
+\noindent For authors from different institutions, use \verb+\+And:
+
+\begin{footnotesize}
+\begin{verbatim}
+\author{Author 1 \\ Address line \\
+... 
+\\ Address line
+\And ... \And
+Author n \\ Address line \\
+... 
+\\ Address line}
+\end{verbatim}
+\end{footnotesize}
+
+\noindent To start a separate ``row" of authors, use \verb+\+AND:
+\begin{footnotesize}
+\begin{verbatim}
+\author{Author 1 \\ Address line \\
+... 
+\\ Address line
+\AND
+Author 2 \\ Address line \\
+... 
+\\ Address line \And
+Author 3 \\ Address line \\
+... 
+\\ Address line}
+\end{verbatim}
+\end{footnotesize}
+
+\noindent If the title and author information does not fit in the area
+allocated, place
+\begin{footnotesize}
+\begin{verbatim}
+\setlength\titlebox{\emph{height}}
+\end{verbatim}
+\end{footnotesize}
+after the \verb+\+documentclass line where \emph{height} is
+something like 2.5in.
+
+\subsubsection{Adding Acknowledgements}
+To acknowledge other contributors, grant support, or whatever, use
+\verb+\+thanks in either the \verb+\+author or \verb+\+title commands.
+For example:
+\begin{footnotesize}
+\begin{verbatim}
+\title{Very Important Results in 
+AI\thanks{This work is supported by 
+everybody.}}
+\end{verbatim}
+\end{footnotesize}
+
+Multiple \verb+\+thanks commands can be given. Each will result in a
+separate footnote indication in the author or title with the
+corresponding text at the bottom of the first column of the document.
+For example:
+\begin{footnotesize}
+\begin{verbatim}
+\author{A. Researcher\thanks{Now at 
+Microsoft.} \andB. Researcher\thanks{Not 
+at Microsoft.}}
+\end{verbatim}
+\end{footnotesize}
+
+One common error with \verb+\+thanks is forgetting to use
+\verb+\+protect on what \LaTeX\ calls ``fragile'' commands.
+
+\subsubsection{Adding a Publication Note}
+To add a comment to the header of document, use \verb+\+pubnote, as in
+\verb+\+pubnote\{\verb+\+emph\{To appear,  AI Journal\}\}
+This should be placed after the title and author information but
+before \verb+\+maketitle. Note that \verb+\+pubnote is for printing
+the paper yourself, and should not be used in submitted versions!
+
+\subsubsection{Copyright information}
+By default, the AAAI copyright slug will be printed at the bottom of
+the first column of your document. To suppress the copyright slug,
+use \verb+\+nocopyright somewhere before \verb+\+maketitle. To change
+the year in the copyright slug from the current year, use
+\verb+\+copyrightyear\{\emph{year}\}
+To change the entire text of the copyright slug, use
+\verb+\+copyrighttext\{\emph{text}\}
+Either of these must appear before \verb+\+maketitle.
+
+\section{Bibliography Style and References}
+The aaai.sty file includes a set of definitions for use in
+formatting references with BibTeX. These definitions make the
+bibliography style closer to the one specified in the ``Instructions
+to Authors'' for AAAI papers.
+
+To use these definitions, you also need the BibTeX style file
+aaai.bst, available from the AAAI web site.
+Then, at the end of your paper but before \verb+\+end{document}, you
+need to put the following lines:
+
+\begin{footnotesize}
+\begin{verbatim}
+\bibliographystyle{aaai}
+\bibliography{bibfile1,bibfile2,...}
+\end{verbatim}
+\end{footnotesize}
+
+The list of files in the bibliography command should be the
+names of your BibTeX source files (that is, the .bib files
+referenced in your paper).
+
+The following commands are available for your use in citing
+references:
+\begin{description}
+\item \verb+\+cite: Cites the given reference(s) with a full citation.
+This appears as ``(Author Year)'' for one reference, or ``(Author Year;
+Author Year)'' for multiple references.
+\item \verb+\+shortcite: Cites the given reference(s) with just the year.
+This appears as ``(Year)'' for one reference, or ``(Year; Year)''
+for multiple references.
+\item \verb+\+citeauthor: Cites the given reference(s) with just the
+author name(s) and no parentheses.
+\item \verb+\+citeyear: Cites the given reference(s) with just the
+fate(s) and no parentheses.
+\end{description}
+
+
+\section{Copyright}
+If you were required to transfer copyright of your paper to AAAI, you must include
+the AAAI copyright notice and web site address on all copies of your paper,
+whether electronic or paper (including the camera copy you provide to AAAI.) If
+you use the  latest AAAI style file, the copyright line will be inserted for you
+automatically. (If your paper doesn't include the copyright slug and it should,
+the paper will be returned to you for reformatting.) If we did not require you to
+transfer copyright, you may disable the copyright line using the
+\verb+\+nocopyrightcommand.
+
+\section{Fonts}
+Papers published in AAAI publicatons must now be formatted using the Times family of
+fonts, so that all papers in the proceedings have a uniform appearance. If you've
+been using Computer Modern, the first advantage you will see to using Times is that
+the character count is smaller --- that means you can put more words on a page!
+
+\subsection{Type 3 Fonts}
+
+You've probably seen PDF files containing type 3 bitmapped fonts on the web (there
+are files like that on AAAI's web site too). They're often the huge files that open
+slowly, scroll very slowly, and aren't readable unless they're enlarged many times. 
+Aside from these problems, these files usually contain fonts designed for 300 dpi
+printers, so they print at 300 dpi even if the printer resolution is 1200 dpi or
+higher. They also often cause high resolution imagesetter devices to crash and 
+sometimes the PDF indexing software we use can't read them.
+
+Because of these and other problems, as well as for purposes of uniformity, {\bf AAAI
+will not longer accept electronic files where the text and headings are formatted
+using obsolete type 3 fonts.} Documents with Type 3 bitmap fonts are not acceptable and will be returned to the authors. 
+
+Fortunately, there are effective workarounds that will
+prevent your file from embedding type 3 bitmapped fonts.
+
+The easiest workaround is to use the times, helvet, and courier packages with
+\LaTeX\ 2e. (Note that papers formatted in this way will still use Computer Modern
+for the mathematics. To make the math look good, you'll either have to use Symbol
+or Lucida, or you will need to install type 1 Computer Modern fonts---for more on
+these fonts, see the section ``Obtaining Type 1 Computer Modern.")
+
+
+\subsection{Making dvips Behave}
+If your PostScript output still includes type 3 fonts, you should run dvips with
+option ``dvips -Ppdf -G0 -o papername.ps papername.dvi" (If your machine or site
+has type 1 fonts, they will probably be loaded.) Note that it is a zero folloing
+the ``-G." This tells dvips to use the config.pdf file (and this file refers to a
+better font mapping). If that doesn't work, you'll have to download the fonts and
+create a font substitution list. 
+
+
+\subsubsection{dvipdf Script}
+Scripts such as dvipdf which ostensibly bypass the Postscript intermediary should not be used since they generally do not instruct dvips to use the config.pdf file.
+
+\subsection{Pdflatex}
+
+Pdflatex is a good alternative solution to the \LaTeX font problem. By using 
+the pdftex program instead of straight \LaTeX or \TeX, you will avoid the type
+3 font problem altogether. However, there is a problem with Pdflatex that
+you might need to overcome. The program often won't embed all
+fonts. To solve this potential disaster, you must ensure that all of the fonts are embedded (use
+pdffonts).  If they are not, you need to configure pdftex to use a font map file
+that specifies that the fonts be embedded.  Also you should ensure that images
+are not downsampled or otherwise compressed in a lossy way.
+
+If fonts aren't getting embedded, users should look at the pdftex mailing list for hints on how to configure pdftex or 
+pdflatex to properly embed the typefaces: http://tug.org/pipermail/pdftex/2002-July/002803.html 
+
+
+\subsection{Ghostscript}
+LatTeX users using GhsotScript should make sure that they are using v7.04 or newer. The older versions do
+not create acceptable PDF files on most platforms.
+
+
+\subsection{Graphics}
+If you are still finding Type 3 fonts in your PDF file, look at your graphics! LaTeX users should check all their imported graphics files as well for font problems!
+
+
+
+\subsection{Obtaining Type 1 Computer Modern}
+
+If you {\it must} use Computer Modern for the mathematics in your paper (you can't
+use it for the text anymore) you will need to download the type 1 Computer fonts.
+They are available without charge from the American Mathematical Society. Point
+your browser to the following url to find them:
+http://www.ams.org/tex/type1-fonts.html
+
+Type 1 versions of Computer Modern are also available (for free) from the BaKoMa
+collection at http://xxx.lanl.gov/ftp/pub/fonts/x-windows/
+\subsubsection{Making A Font Substitution List}
+Once you've installed the type 1 Computer Modern fonts, you'll need to get dvips to
+refrain from embedding the bitmap fonts. To do this, you'll need to create a font
+substitution list for use by dvips. Each line of this file should start with the
+name of the font that TeX uses, as shown below:
+
+\begin{footnotesize}
+\begin{flushleft}
+cmb10 $<$/usr/local/lib/tex/fonts/type1/cmb10.pfb \\
+cmbsy10 $<$/usr/local/lib/tex/fonts/type1/cmbsy10.pfb \\
+cmbsy6 $<$/usr/local/lib/tex/fonts/type1/cmbsy6.pfb \\
+cmbsy7 $<$/usr/local/lib/tex/fonts/type1/cmbsy7.pfb \\
+cmbsy8 $<$/usr/local/lib/tex/fonts/type1/cmbsy8.pfb \\
+cmbsy9 $<$/usr/local/lib/tex/fonts/type1/cmbsy9.pfb \\
+cmbx10 $<$/usr/local/lib/tex/fonts/type1/cmbx10.pfb \\
+cmbx12 $<$/usr/local/lib/tex/fonts/type1/cmbx12.pfb \\
+\end{flushleft}
+\end{footnotesize}
+
+In this example, the assumption is that you have PFB versions of the Computer Modern
+fonts located in the directory /urs/local/lib/tex/fonts/type1/. The file name
+should be the type 1 encoding of the Postscript font in PFB or PFA format.
+
+If your home directory contains a file called .dvipsrc containing the line: ``*	p
++fontMapFileName" that font map will be used by dvips for all the jobs you run. You
+can also created a file, like "config.embed" that contains that line. If you do
+that, when you invoke dvips with the command ``dvips -P embed ...," dvips will look
+for config embed in the current directory (and perhaps your home directory). You
+may need to change how dvips looks for config files. To do this, read the
+``environment variables" section of the dvips documentation.
+
+If you need more information, or a better and more technical explanation of how to
+make this all work, Kendall Whitehouse has written detailed instructions on
+"Creating Quality Adobe PDF FIles from TeX with DVIPS." It is available from
+Adobe's Web Site, and other sites on the Internet (you'll need to do a quick search
+for it). 
+
+\subsection{Checking For Improper Fonts}
+Once a PDF has been made, authors should check to ensure that the file contains no Type 3 fonts and further that all 
+fonts have been embedded. This step is hardly ever used by authors, and it would save significant time (and money!) 
+if they would simply take 45 seconds and do this. This can be done with the pdffonts utility that is included in the 
+Xpdf package (http://www.foolabs.com/xpdf/).
+ Alternatively, you can use the File--Document Properties--Fonts option in Acrobat Reader; 
+if you chose the latter, you should be sure that no other PDF documents are open at the time.
+
+\section{Citations and References}
+Be sure to read the ``Formatting Instructions for Authors" paper that was included
+in your author kit (and is available on the AAAi website. \LaTeX\ will handle your
+citations improperly unless you change its configuration and use the correct
+commands. The AAAI style file and the BibTeX files will help you in this regard.
+George Ferguson's paper shows you the proper commands necessary to implement
+AAAI citation and reference style. 
+
+\section{Illustrations and Figures}
+Figures, drawings, tables, and photographs should be placed throughout the paper
+near the place where they are first discussed. Do not group them together at the end
+of the paper. \LaTeX\ will sometimes put portions of the figure or table in the
+margin. If this happens, you need to scale the figure or table down, because {\bf
+nothing} (even a line!) is allowed to intrude into the margins.
+
+\section{Electronic Submissions}
+To aid in the creation of a permanent electronic archive of all its publications and for creation
+of its publications, AAAI requires electronic submission of your paper in PDF format, as well as
+its abstract, and author--title information. Please see the Author Formatting Instructions
+document for additional information.
+
+As a \LaTeX\ user, you need to pay attention to the special requirements imposed on you. In
+particular, although you are required to submit a PDF version of your paper, we may also require
+that you submit, in a tar, zipped, or stuffed archive, all the source files (including any
+figures) you used to create your paper. If we do request this material, please provide us with a
+{\bf single} source file containing your entire paper, including the bibliography. Also please
+remove all commented out portions of your paper. We may also request that you send us the figures
+that accompany your document. Please do not send us material that is not actually used in the
+paper.
+
+If we ask for this material, it is because nearly all the problems we have with electronic
+submissions come from persons using \LaTeX\ . Many of the problems would be easy to fix if we had
+all the source files, which is why we may ask you to
+ send them to us. Even if we can't take the time to fix the file, we can usually tell quite
+quickly what is wrong if we have your source, and give you directions on how you might fix it
+yourself. 
+
+\section{Possible Bugs in the AAAI Style File}
+
+Some users have found that the aaai.sty does not work properly at their site. They have submitted
+suggestions for improvement of the macro. You will find those suggestions in the buglist file
+that is part of complete set, and also as a separate file on the AAAI website. Some of these
+suggestions have already been implemented, while others seem to be dependent on individual site
+conditions. If you're having problems with aaai.sty, we suggest you look at the ``bug list." The
+AAAI style is {\bf not} guaranteed to work. It is provided in the hope that it will make the
+preparation of papers easier. There are undoubtably bugs in this style. If you make bug fixes,
+improvements, etc. please let us know so that we might include them in the buglist.
+
+\section{Inquiries}
+If you have any general questions about the preparation or submission of your paper, please
+contact AAAI Press. If you have technical questions about implementation of the macros, please
+contact an expert at your site. We do not provide technical support for \LaTeX\ or any other
+software package. If you are new to \LaTeX\, your paper is fairly straightforward, and doesn't
+include multilevel equations, you will probably find that you can format it much faster using a
+word-processing program like Microsoft Word. This is especialy true if your paper includes a
+number of pictures or graphics.
+
+\section{A Note on Printing}
+Some laser printers have a serious problem printing \TeX\ output. These printing devices,
+commonly known as ``write-white'' laser printers, tend to make characters too light. To get
+around this problem, a darker set of fonts must be created for these devices.
+
+\section{ Acknowledgments}
+AAAI is especially grateful to Peter Patel Schneider for his work in implementing the aaai.sty
+file, liberally using the ideas of other style hackers, including Barbara Beeton. We also
+acknowledge with thanks the work of George Ferguson for his guide to using the style and BibTeX
+files --- which has been incorporated into this document and comprises almost all the subsection 
+entitled ``Using the AAAI Style File,"  as well as the many others who have, from time to time,
+send in suggestions on improvements to the AAAI styles. 
+
+
+The preparation of the \LaTeX{} and Bib\TeX{} files that implement these instructions was
+supported by Schlumberger Palo Alto Research, AT\&T Bell
+ Laboratories, Morgan Kaufmann Publishers, and AAAI Press. Bibliography style changes were added
+by Sunil Issar. \verb+\+pubnote was added by J. Scott Penberthy. George Ferguson added support for
+printing the AAAI copyright slug. \cite{manning_introduction_2008}
+
+
+\bigskip
+\noindent Thank you for reading these instructions carefully. We look forward to
+receiving your camera-ready copy!
+
+\bibliography{socreport.bib}
+\bibliographystyle{aaai}
+
+\end{document}

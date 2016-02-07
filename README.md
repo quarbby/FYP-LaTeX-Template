@@ -53,6 +53,11 @@ make clean
 make tar
 ```
 
+### Further Resources from School of Computing
+* [BComp. Final Year Project](https://www.comp.nus.edu.sg/undergraduates/fyp.html)
+* [Final Year Report Format](https://www.comp.nus.edu.sg/undergraduates/documents/FYP-Report-Format-final_000.pdf)
+* [Nature of Projects and Keyword Descriptors](https://www.comp.nus.edu.sg/undergraduates/fyp_keywords.html)
+
 ### Some Errors
 * bibtex/ pdflatex: No such file or directory for OSX
 Might be due to directory paths. Refer to [this stack overflow answer](http://tex.stackexchange.com/questions/163849/mavericks-upgrade-screwed-up-my-pdflatex-command-not-found)

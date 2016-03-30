@@ -55,7 +55,7 @@ make tar
 
 ### Further Resources from School of Computing
 * [BComp. Final Year Project](https://www.comp.nus.edu.sg/undergraduates/fyp.html)
-* [Final Year Report Format](https://www.comp.nus.edu.sg/undergraduates/documents/FYP-Report-Format-final_000.pdf)
+* [Final Year Report Format](https://www.comp.nus.edu.sg/images/resources/content/undergraduates/FYP-Report-Format-final_000.pdf)
 * [Nature of Projects and Keyword Descriptors](https://www.comp.nus.edu.sg/undergraduates/fyp_keywords.html)
 
 ### Some Errors

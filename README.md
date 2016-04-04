@@ -48,6 +48,11 @@ Because LaTeX can be very messy
 make clean
 ```
 
+### Compiling with LaTeX IDE
+* Compile 'main.tex' using latex or pdflatex => this step will generate main.aux file
+* Compile 'main.aux' (NOT 'ref.bib') using bibtex
+* Compile twice 'main.tex' using latex or pdflatex
+
 ### TAR GZip the files 
 ```
 make tar

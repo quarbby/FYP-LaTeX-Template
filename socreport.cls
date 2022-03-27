@@ -103,6 +103,7 @@
   \newenvironment{acknowledgement}{%
       \titlepage
       \doublespacing
+          \phantomsection
 	  \addcontentsline{toc}{chapter}{Acknowledgement}
       \@beginparpenalty\@lowpenalty
       \begin{center}%
@@ -770,6 +771,7 @@ Deliverables:
 \if@titlepage
   \newenvironment{abstract}{%
       \titlepage
+      	  \phantomsection
 	  \addcontentsline{toc}{chapter}{\abstractname}
       \singlespacing
       \null\vfil
@@ -963,6 +965,7 @@ Deliverables:
 \newcommand*\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
 \newcommand\listoffigures{%
 	\singlespacing
+	\phantomsection
 	\addcontentsline{toc}{chapter}{\listfigurename}
     \chapter*{\listfigurename}%
       \@mkboth{\MakeUppercase\listfigurename}%
@@ -974,6 +977,7 @@ Deliverables:
 \newcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand\listoftables{%
 	\singlespacing
+	\phantomsection
 	\addcontentsline{toc}{chapter}{\listtablename}
     \chapter*{\listtablename}%
       \@mkboth{%
